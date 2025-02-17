@@ -1,0 +1,149 @@
+body {
+    background-color: #2e2d2c; /*dark background, old color: 6f8a74 Dark, muted earthy tone */
+    font-family: 'Cinzel', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    color: #e1dabb; /* Light, warm beige for text */
+}
+
+.container {
+    background-color: #6f8a74;
+    border-radius: 25px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.mystical-border {
+    border: 3px solid #C6A03A; /* Border color matching the wooden tones */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #e1dabb; /* Light beige */
+}
+
+.header p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #d6a191; /* Pastel pink */
+    font-weight: bold;
+}
+
+.input-field {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 16px;
+    background-color: #FFF3E6;
+    color: #333;
+}
+
+.login-button {
+    background-color: #d6a191; /* Pastel pink button */
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.login-button:hover {
+    background-color: #D78A67; /* Darker pastel pink on hover */
+   /* box-shadow: 0 0 15px #FFDE00, 0 0 30px #FFDE00;*/
+}
+
+.decorations {
+    top: 20%;
+    left: 0;
+    width: 10%;
+    pointer-events: none;
+}
+
+.decoration {
+    font-size: 30px;
+    position: absolute;
+    animation: float 5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 10px #ffb732);
+}
+
+.star {
+    top: 20%;
+    left: 10%;
+    color: #ffd700; /* Gold for a mystical look */
+    animation-delay: 1s;
+}
+
+.leaf {
+    top: 20%;
+    left: 80%;
+    color: #618b4a; /* Earthy green */
+    animation-delay: 1s;
+}
+
+.moon {
+    top: 10%;
+    left: 25%;
+    color: #ffd700; /* Gold */
+    animation-delay: 2s;
+}
+
+.pumpkin {
+    top: 10%;
+    right: 25%;
+    color: #ff8c00; /* Pumpkin orange */
+    animation-delay: 3s;
+}
+
+/* Flash message container */
+.flash-message {
+    position: fixed; /* Keep it at the top of the page */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Adapt width for responsive design */
+    max-width: 600px;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 15px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it appears above other content */
+    text-align: center; /* Center-align text */
+    font-size: 16px; /* Adjust font size */
+}
+
+/* Error message styling */
+.flash-message.error {
+    background-color: #f6c2c6; /* Light red background */
+    color: red;
+    border-color: #f5c6cb;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+

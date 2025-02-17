@@ -1,0 +1,80 @@
+/* profile.css */
+
+main section {
+    background-color: #FFF3E6; /* light background for main sections */
+    color: #2e2d2c; /* Dark text color for readability */
+    margin-top: 240px;
+    padding: 20px; /* Add padding inside sections */
+    border-radius: 10px; /* Round corners of sections */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Strong shadow for floating effect */
+    border: 3px solid #C6A03A; /* Golden border around sections */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.user-profile {
+    background-color: #FFF3E6;
+    color: #2e2d2c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 3px solid #C6A03A;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.user-profile h2 {
+    font-size: 1.8em;
+    color: #2e2d2c;
+    margin-bottom: 15px;
+}
+
+.profile-picture {
+    margin-bottom: 15px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #6f8a74;
+}
+
+.profile-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #d6a191;
+    font-size: 1em;
+    color: #2e2d2c;
+}
+
+.profile-detail:last-child {
+    border-bottom: none;
+}
+
+.profile-detail label {
+    font-weight: bold;
+    color: #2e2d2c;
+}
+
+.edit-button {
+    margin-top: 20px;
+}
+
+.edit-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #d6a191;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button a:hover {
+    background-color: #D78A67;
+}

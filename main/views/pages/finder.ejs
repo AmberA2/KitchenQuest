@@ -1,0 +1,69 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/finderStyle.css">
+</head>
+
+<body>
+    <section>
+        <div id="search-form">
+            <div style="text-align: center;">
+                <h1>Recipe Finder</h1>
+                <p>Use filters to find meals that fit your preferences.</p>
+            </div>
+
+            <div style="text-align: center">
+                <input type="search" id="search-term" class="finder-search-bar" placeholder="Search for recipes...">
+                <button id="search-btn" class="search-btn">Search</button>
+                <button id="clear-btn" class="clear-btn">Clear</button>
+            </div>
+
+            <div style="display: flex; justify-content: space-around;">
+                <div class="column">
+                    <h2>Meals</h2>
+                    <div style="font-size: 30;">
+                        <input type="radio" name="meals" value="Breakfast">Breakfast<br>
+                        <input type="radio" name="meals" value="Lunch">Lunch<br>
+                        <input type="radio" name="meals" value="Dinner">Dinner<br>
+                        <input type="radio" name="meals" value="Dessert">Dessert<br>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>Special Diet</h2>
+                    <div style="font-size: 30;">
+                        <input type="checkbox" name="allergies" value="Vegetarian">Vegetarian<br>
+                        <input type="checkbox" name="allergies" value="Egg-free">Egg-free<br>
+                        <input type="checkbox" name="allergies" value="Soy-free">Soy-free<br>
+                        <input type="checkbox" name="allergies" value="Nut-free">Nut-free<br>
+                        <input type="checkbox" name="allergies" value="Gluten-free">Gluten-free<br>
+                        <input type="checkbox" name="allergies" value="Dairy-free">Dairy-free<br>
+                        <input type="checkbox" name="allergies" value="Diabetes-friendly">Diabetes-friendly<br>
+                        <input type="checkbox" name="allergies" value="Shellfish">Shellfish-free<br>
+                    </div>
+                </div>
+                <div class="column">
+                    <h2>Cook Time</h2>
+                    <div style="font-size: 30;">
+                        <input type="radio" name="cooktime" value="15 Minutes">15 Minutes<br>
+                        <input type="radio" name="cooktime" value="30 Minutes">30 Minutes<br>
+                        <input type="radio" name="cooktime" value="45 Minutes">45 Minutes<br>
+                        <input type="radio" name="cooktime" value="1 Hour">1 Hour<br>
+                        <input type="radio" name="cooktime" value="1 Hour+">1 Hour+<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="centered-section">
+        <h2>Recipes</h2>
+
+        <div class="recipe-cards">
+            <!-- The recipe cards will be dynamically populated by JavaScript -->
+        </div>
+
+        <!-- Pagination Controls will be rendered dynamically by JavaScript -->
+        <div class="pagination-container" style="text-align: center; margin-top: 20px;"> </div>
+    </section>
+
+    <script src="/js/finder.js" defer></script>
+</body>

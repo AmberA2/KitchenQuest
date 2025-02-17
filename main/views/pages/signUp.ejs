@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kitchen Quest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/signUpStyles.css"> <!-- Public path for CSS -->
+</head>
+<body>
+    <script type="text/javascript" src="/js/signUp.js"></script> <!-- Public path for JavaScript -->
+     <!-- Flash message display -->
+     <% if (messages.error && messages.error.length > 0) { %>
+        <div class="flash-message error">
+            <%= messages.error[0] %>
+        </div>
+    <% } %>
+    <% if (messages.success && messages.success.length > 0) { %>
+        <div class="flash-message success">
+            <%= messages.success[0] %>
+        </div>
+    <% } %>
+
+    <form action="/signup" method="POST" onsubmit="return validate(event);">
+        <div class="signup-container">
+            <div class="signup-box">
+                <div class="decorations">
+                    <div class="decoration moon">🌙</div>
+                    <div class="decoration pumpkin">🎃</div>
+                    <div class="decoration star">✨</div>
+                </div>
+                <h1 class="logo">Kitchen Quest</h1>
+                <p class="subtitle">Recipe Finder</p>
+
+                <input type="text" class="input-field" name="name" id="signUpName" placeholder="Name">
+                <input type="email" class="input-field" name="email" id="signUpEmail" placeholder="Email">
+                <input type="password" class="input-field" name="password" id="signUpPassword" placeholder="Password">
+
+                <input type="submit" class="signup-btn" value="Sign Up">
+                 <!-- Back to Login Button -->
+                <button type="button" class="back-to-login-btn" onclick="window.location.href='/login'"> Back to Login </button>
+                
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

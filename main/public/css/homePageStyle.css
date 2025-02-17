@@ -1,0 +1,268 @@
+
+
+/* Popped out/floating effect for sections */
+main section {
+    background-color: #FFF3E6; /* light background for main sections */
+    color: #2e2d2c; /* Dark text color for readability */
+    margin-top: 240px;
+    padding: 20px; /* Add padding inside sections */
+    border-radius: 10px; /* Round corners of sections */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Strong shadow for floating effect */
+    border: 3px solid #C6A03A; /* Golden border around sections */
+}
+
+/* Weekly Calendar Section */
+.weekly-calendar {
+    text-align: center; /* Center align content in the calendar section */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for floating effect */
+    border: 3px solid #C6A03A; /* Golden border around the calendar section */
+    margin-bottom: 10px;
+}
+
+#homePageCalendarP{
+    text-align: center; /* Center align content in the calendar section */
+}
+
+.calendar-snippet {
+    background-color: #6f8a74; /* Use Sage Green for calendar snippet background */
+    padding: 10px; /* Add padding inside calendar snippet */
+    color: white; /* Set text color to white for contrast */
+    border-radius: 15px; /* Round corners of calendar snippet */
+}
+
+/* Saved Recipes Section */
+.my-recipes {
+    text-align: center; /* Center align content in saved recipes section */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow for floating effect */
+    border: 3px solid #C6A03A; /* Golden border around saved recipes section */
+    margin-top: 0px;
+}
+
+.recipe-cards {
+    display: flex; /* Use flexbox for layout of recipe cards */
+    justify-content: space-around; /* Space out recipe cards evenly */
+}
+
+.recipe-card {
+    background-color: #f2ddbb; /* Use Soft Orange for recipe card background */
+    padding: 20px; /* Add padding inside recipe cards */
+    width: 150px; /* Set a fixed width for recipe cards */
+    height: 1000px;
+}
+
+/*--------------------------------------------*/
+
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cinzel', serif;
+    /* Set the font to Cinzel for all text */
+    background-color: #242424;
+    /* Set a dark background color */
+    color: white;
+    /* Set text color to white for readability */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+/* Popped out/floating effect for sections */
+main section {
+    background-color: #FFF3E6;
+    /* light background for main sections */
+    color: #2e2d2c;
+    /* Dark text color for readability */
+    margin-top: 240px;
+    width: 80vw;
+    padding: 20px;
+    /* Add padding inside sections */
+    border-radius: 10px;
+    /* Round corners of sections */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Strong shadow for floating effect */
+    border: 3px solid #C6A03A;
+    /* Golden border around sections */
+}
+
+.centered-section {
+    margin: 0 auto;
+    /* Center the section horizontally */
+    margin-top: 10px;
+    background-color: #FFF3E6;
+    /* light background for main sections */
+    color: #2e2d2c;
+    /* Dark text color for readability */
+    text-align: center;
+    /* Center text inside the section */
+}
+
+.recipe-cards {
+    display: flex;
+    /* Use flexbox for layout of recipe cards */
+    justify-content: space-around;
+    /* Space out recipe cards evenly */
+}
+
+.recipe-card {
+    background-color: #f2ddbb;
+    /* Use Soft Orange for recipe card background */
+    width: 150px;
+    /* Set a fixed width for recipe cards */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+.recipe-banner {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.recipe-card:hover {
+    transform: scale(1.02);
+}
+
+.recipe-body {
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px auto;
+}
+
+.recipe-name {
+    padding-top: -10px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.recipe-descriptions {
+    font-size:10px;
+}
+
+.recipe-basics {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.column {
+    float: left;
+    width: 25vw;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    zoom: 1.25;
+    /* Increase the size */
+    margin-right: 10px;
+    /* Space between checkbox and label */
+}
+
+.filters {
+    font-size: 30;
+}
+
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.recipe-card {
+    width: calc(20% - 20px);
+    /* 6 cards per row */
+    min-width: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 100px;
+
+    overflow: hidden;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination-btn {
+    padding: 10px 15px;
+    margin: 2px; 
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #000;
+}
+
+.pagination-btn.active {
+    background: #555;
+    color: white;
+}
+
+.pagination-btn:hover {
+    background: #777;
+}
+
+.finder-search-bar {
+    padding: 10px;
+    /* Add padding inside the search bar */
+    width: 300px;
+    /* Set a fixed width for the search bar */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add rounded corners */
+}
+
+.clear-btn {
+    padding: 10px 15px;
+    /* Add padding for search button */
+    background-color: #d6a191;
+    /* Set background color to Soft Pink */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Add rounded corners */
+    margin-left: 5px;
+    /* Add space to the left of the button */
+    color: white;
+    /* Set button text color to white */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    font-family: 'Cinzel', serif;
+    /* Set font for button text */
+}
+
+.clear-btn:hover {
+    background-color: #ac413f;
+}

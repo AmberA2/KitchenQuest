@@ -1,0 +1,173 @@
+/* General styles */
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #2e2d2c; /* Dark gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.signup-box {
+    background-color: #6f8a74; /* age green with transparency */
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+    border: 2px solid #C6A03A; /* Glowing border effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+/* Decorative elements */
+.decorations {
+    top: 20%;
+    left: 0;
+    width: 10%;
+    pointer-events: none;
+}
+.decoration {
+    font-size: 30px;
+    animation: float 5s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 10px #ffb732);
+}
+
+.moon {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 30px;
+    animation-delay: 1s;
+    filter: drop-shadow(0 0 8px #eef126);
+}
+.pumpkin {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    font-size: 28px;
+    filter: drop-shadow(0 0 8px #ff6200);
+    animation-delay: 1s;
+}
+
+.star {
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    font-size: 28px;
+    filter: drop-shadow(0 0 6px #ffe04e);
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Logo and text */
+.logo {
+    font-size: 36px;
+    color: #e1dabb; /* beige text */
+    margin: 15px 0;
+    /*text-shadow: 0 0 15px #ffea00, 0 0 30px #ffa500; *//* Mystical glowing effect */
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #d6a191; /* Soft pink */
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Input fields */
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #FFF3E6;
+    font-size: 18px;
+    color: #2e2446; /* Dark text */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2), inset 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.input-field:focus {
+    outline: none;
+    box-shadow: 0 0 8px #ffd700, inset 0 0 8px #ffca85; /* Glowing focus effect */
+}
+
+/* Sign Up button */
+.signup-btn {
+    background-color: #d6a191;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.signup-btn:hover {
+    background-color: #D78A67;
+}
+
+/* Back to Login Button */
+.back-to-login-btn {
+    background-color: #d6a191; /* Same background as Sign Up button */
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: inline-block; /* Ensure the button behaves like a block element */
+}
+
+.back-to-login-btn:hover {
+    background-color: #D78A67; /* Same hover effect as Sign Up button */
+}
+
+/* Flash message container */
+.flash-message {
+    position: fixed; /* Keep it at the top of the page */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Adapt width for responsive design */
+    max-width: 600px;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 15px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000; /* Ensure it appears above other content */
+    text-align: center; /* Center-align text */
+    font-size: 16px; /* Adjust font size */
+}
+
+/* Error message styling */
+.flash-message.error {
+    background-color: #f6c2c6; /* Light red background */
+    color: red;
+    border-color: #f5c6cb;
+}
+
+/* Success message styling */
+.flash-message.success {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    border-color: #c3e6cb;
+}
+
+

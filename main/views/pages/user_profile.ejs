@@ -1,0 +1,30 @@
+<head>
+    <script src="/js/user_profile.js" defer></script>
+    <link rel="stylesheet" href="/css/userProfileStyle.css">
+</head>
+
+<section class="user-profile">
+    <h2>User Profile</h2>
+
+    <!-- Profile Picture -->
+    <div class="profile-picture">
+        <img src="<%= userProfileImage %>" alt="Profile Photo">
+    </div>
+
+    <!-- Username -->
+    <div class="profile-detail">
+        <label>Name:</label>
+        <span><%= name %></span> <!-- Replace with dynamic username -->
+    </div>
+
+    <!-- Email -->
+    <div class="profile-detail">
+        <label>Email:</label>
+        <span><%= email %></span> <!-- Replace with dynamic email -->
+    </div>
+
+    <!-- Edit Profile Button -->
+    <div class="edit-button">
+        <a href="/editProfile">Edit Profile</a> <!-- Link back to edit page -->
+    </div>
+</section>

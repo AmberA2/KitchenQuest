@@ -1,0 +1,31 @@
+<head>
+    <script src="/js/editProfile.js" defer></script>
+    <link rel="stylesheet" href="/css/editProfileStyle.css">
+</head>
+
+<body>
+    <section class="edit-profile">
+        <h2>Edit Profile</h2>
+        <form action="/user_profile" method="post" class="profile-form" id="editProfileForm">
+            <input type="hidden" id="userId" name="id" value="<%= userId %>"> <!-- Add this hidden field -->
+        
+            <!-- Profile Picture -->
+            <div class="form-group">
+                <label for="profile-photo">Profile Photo</label>
+                <input type="file" id="image" name="image">
+            </div>
+        
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" id="name" name="name" value="<%= name %>">
+            </div>
+        
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="save-btn" id="submit">Save Changes</button>
+            </div>
+        </form>
+        
+    </section>
+</body>

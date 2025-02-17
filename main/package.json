@@ -1,0 +1,32 @@
+{
+    "name": "cs372_kitchenquest",
+    "version": "1.0.0",
+    "description": "App produced by Amber, Korban, Carmen, and Ivie ",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "mocha ./tests --recursive --timeout 15000 --exit"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "body-parser": "1.20.3",
+        "connect-flash": "^0.1.1",
+        "cookie-parser": "^1.4.7",
+        "dotenv": "16.4.5",
+        "ejs": "3.1.10",
+        "express": "4.21.1",
+        "express-ejs-layouts": "2.5.1",
+        "express-session": "^1.18.1",
+        "express-validator": "7.2.0",
+        "mocha": "11.0.1",
+        "mongoose": "8.8.1",
+        "passport": "0.7.0",
+        "passport-local": "1.0.0"
+    },
+    "devDependencies": {
+        "supertest": "^7.0.0"
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Quest</title>
+    <link rel="stylesheet" href="/css/layoutStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <script src="/js/layout.js" defer></script>
+</head>
+<body>
+    <div class="topBar">
+        <header>
+            <div class="title-section">
+                <h1><a href="/homepage">KitchenQuest</a></h1>
+            </div>
+            <div class="search-section">
+                <form action="/finder" method="GET">
+                    <input type="text" 
+                           name="search" 
+                           placeholder="Search for recipes..." 
+                           class="search-bar" 
+                           value="<%= typeof search !== 'undefined' ? search : '' %>">
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+            <a href="" class="user-info-link">
+                <div class="user-info">
+                    <div class="user-photo-container">
+                        <img src="<%= userProfileImage %>" alt="User Photo" class="user-photo">
+                    </div>
+                    <span class="user-name"><%= name %></span> <!-- Dynamic user name -->
+                    <div class="dropdown-menu">
+                        <a href="/user_profile">Profile</a>
+                        <a href="/editProfile">Edit Profile</a>
+                        <a href="/logout" onclick="return confirmLogout()">Logout</a>
+                    </div>
+                </div>
+            </a>
+        </header>
+        <!-- Navigation Tabs -->
+        <nav>
+            <div class="tabs">
+                <a href="/finder" class="<%= (currentPath === '/finder') ? 'active' : '' %>">Finder</a>
+                <a href="/calendar" class="<%= (currentPath === '/calendar') ? 'active' : '' %>">Calendar</a>
+                <a href="/favorites" class="<%= (currentPath === '/favorites') ? 'active' : '' %>">Favorites</a>
+                <a href="/add-recipes" class="<%= (currentPath === '/add-recipes') ? 'active' : '' %>">Add Recipes</a>
+                <a href="/cooking101" class="<%= (currentPath === '/cooking101') ? 'active' : '' %>">Cooking 101</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <%- body %>
+    </main>
+</body>
+</html>

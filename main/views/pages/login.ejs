@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/loginStyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Kitchen Quest Login</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="/js/login.js"></script>
+    <!-- Flash message display -->
+    <% if (messages.error && messages.error.length > 0) { %>
+        <div class="flash-message error">
+            <%= messages.error[0] %>
+        </div>
+    <% } %>
+    <form action="/login" method="POST" onsubmit="return validate(event);">
+        <div class="container">
+            <div class="mystical-border">
+                <div class="header">
+                    <h1>Kitchen Quest</h1>
+                    <p>Recipe Finder</p>
+                </div>
+                <div class="login-form">
+                    <input type="email" placeholder="Email" class="input-field" name="email" id="logInEmail">
+                    <input type="password" placeholder="Password" class="input-field" name="password" id="loginPassword">  
+                    <input type="submit" class="login-button" value="Log In">
+                    <button type="button" class="login-button" name="signUpBtn" id="logInSignUpBtn" onclick="redirect()">Sign Up</button>
+                </div>
+            </div>
+            <div class="decorations">
+                <div class="decoration star">&#9733;</div>
+                <div class="decoration leaf">&#127810;</div>
+                <div class="decoration moon">&#9790;</div>
+                <div class="decoration pumpkin">&#127875;</div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+

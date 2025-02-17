@@ -1,0 +1,164 @@
+/* Popped out/floating effect for sections */
+main section {
+    background-color: #FFF3E6;
+    /* light background for main sections */
+    color: #2e2d2c;
+    /* Dark text color for readability */
+    margin-top: 240px;
+    padding: 20px;
+    /* Add padding inside sections */
+    border-radius: 10px;
+    /* Round corners of sections */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Strong shadow for floating effect */
+    border: 3px solid #C6A03A;
+    /* Golden border around sections */
+}
+
+/* Form styling */
+#add-recipe {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #6f8a74;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    flex: 1;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    background-color: #405842;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+}
+
+/* Styling for the input fields using IDs */
+#recipeName,
+#description,
+#totalTime,
+#prepTime,
+#cookTime,
+#ingredient,
+#directions {
+    width: 100%;
+    /* Full width */
+    padding: 10px;
+    /* Padding inside the input */
+    margin: 10px 0;
+    /* Space above and below */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 15px;
+    /* Add padding for search button */
+    background-color: #d6a191;
+    /* Set background color to Soft Pink */
+    border: none;
+    /* Remove border */
+    border-radius: 50px;
+    /* Add rounded corners */
+    color: white;
+    /* Set button text color to white */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+    font-family: 'Cinzel', serif;
+    /* Set font for button text */
+}
+
+.button:hover {
+    background-color: #9B6D4A;
+}
+
+/* Specific style for the submit button */
+#submit-recipe {
+    background-color: #f2ddbb;
+    color: #2e2d2c;
+    font-weight: bold;
+}
+
+#submit-recipe:hover {
+    background-color: #2e2d2c;
+    color: white;
+    font-weight: bold;
+}
+
+.info-box {
+    margin: 0%;
+}
+
+.info-box h4 {
+    margin-top: 0%;
+}
+
+.tag-box {
+    margin: 0%;
+}
+
+.form-btn-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.ingredient-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Add some space between input and button */
+    margin-bottom: 15px;
+    /* Add space between rows */
+}
+
+.ingredient-row input[type="text"] {
+    width: 100%;
+    /* Make input fill the container */
+    box-sizing: border-box;
+}
+
+.remove-button {
+    align-self: flex-start;
+    /* Align button to the left */
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.direction-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Add some space between input and button */
+    margin-bottom: 15px;
+    /* Add space between rows */
+}
+
+.direction-row input[type="text"] {
+    width: 100%;
+    /* Make input fill the container */
+    box-sizing: border-box;
+}

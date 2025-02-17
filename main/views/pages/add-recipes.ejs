@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" href="/css/addRecipesStyle.css">
+    <script type="text/javascript" src="/js/add-recipes.js" defer></script>
+</head>
+
+
+<!-- Recipe Section -->
+<section class="new-recipe">
+    <h2>Create a New Recipe</h2>
+    <form id="add-recipe" action="/add-recipes" method="POST" onsubmit="return validateForm(this)">
+        <fieldset id="meal-details">
+            <legend>Details</legend>
+            <!-- Recipe Name -->
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" name="recipeName" required>
+            <!-- Description -->
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" placeholder="Add Description.." required>
+            <!-- Total, Prep and Cook Time -->
+            <label for="totalTime">Total Time:</label>
+            <input type="number" id="totalTime" name="totalTime" required>
+            <label for="prepTime">Prep Time (minutes):</label>
+            <input type="number" id="prepTime" name="prepTime" required>
+            <label for="cookTime">Cook Time (minutes):</label>
+            <input type="number" id="cookTime" name="cookTime" required>
+        </fieldset>
+
+        <!-- Ingredients Section -->
+        <fieldset id="ingredients-fieldset">
+            <legend>Ingredients</legend>
+            <div id="ingredient-fields">
+                <input type="text" id="ingredient" name="ingredientName[]" placeholder="Ingredient Name.." required>
+            </div>
+            <button class="button" type="button" id="add-ingredient-btn">Add Ingredient</button>
+        </fieldset>
+
+        <!-- Directions Section -->
+        <fieldset id="addStep-fieldset">
+            <legend>Directions</legend>
+            <div id="direction-fields">
+                <textarea id="directions" name="directions[]" placeholder="Step 1..." required></textarea>
+            </div>
+            <button class="button" type="button" id="add-step-btn">Add Step</button>
+        </fieldset>
+
+        <!-- Tags Section -->
+        <fieldset id="tags-fieldset">
+            <legend>Tags</legend>
+            <!-- Meal Type -->
+            <div class="info-box">
+                <h4>Meal Type:</h4>
+                <label><input type="radio" name="meal-type" value="breakfast" /> Breakfast</label>
+                <label><input type="radio" name="meal-type" value="lunch" /> Lunch</label>
+                <label><input type="radio" name="meal-type" value="dinner" /> Dinner</label>
+                <label><input type="radio" name="meal-type" value="dessert" /> Dessert</label>
+            </div>
+            <hr>
+            <!-- Additional Tags -->
+            <div class="tag-box">
+                <h4>Select all others that apply:</h4>
+                <input type="checkbox" name="tags[]" value="Vegetarian"> Vegetarian<br>
+                <input type="checkbox" name="tags[]" value="Egg-free"> Egg-free<br>
+                <input type="checkbox" name="tags[]" value="Soy-free"> Soy-free<br>
+                <input type="checkbox" name="tags[]" value="Nut-free"> Nut-free<br>
+                <input type="checkbox" name="tags[]" value="Gluten-free"> Gluten-free<br>
+                <input type="checkbox" name="tags[]" value="Dairy-free"> Dairy-free<br>
+                <input type="checkbox" name="tags[]" value="Shellfish-free"> Shellfish-free<br>
+                <input type="checkbox" name="tags[]" value="Diabetes-friendly">
+                Diabetes-friendly<br>
+                <input type="checkbox" name="tags[]" value="15 Minutes"> 15 Minutes<br>
+                <input type="checkbox" name="tags[]" value="30 Minutes"> 30 Minutes<br>
+                <input type="checkbox" name="tags[]" value="1 Hour"> 1 Hour<br>
+                <input type="checkbox" name="tags[]" value="1+ Hour"> 1+ Hour<br>
+            </div>
+        </fieldset>
+
+        <!-- Save/Submit Buttons -->
+        <div class="form-btn-box">
+            <input class="button" type="submit" value="Add Recipe">
+        </div>
+    </form>
+</section>

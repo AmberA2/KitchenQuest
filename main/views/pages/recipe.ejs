@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/recipeStyle.css">
+    <title>
+        <%= recipe.name %>
+    </title>
+</head>
+
+<body>
+    <script src="/js/recipe.js" defer></script>
+
+    <img class="recipe-img" src="<%= recipe.image %>" alt="Recipe Image">
+
+    <section class="recipe-info">
+
+        <div class="buttons-container">
+            <button id="favorite-btn" class="action-btn"  data-recipe-id="<%= recipe._id %>" 
+                data-user-id="<%= userId %>">❤️ Favorite</button>
+            <button id="calendar-btn" class="action-btn">📅 Add to Calendar</button>
+        </div>
+
+        <h1 class="recipe-name">
+            <%= recipe.name %>
+        </h1>
+        <div>
+            <p><strong>Total Time:</strong>
+                <%= recipe.totalTime %>
+            </p>
+            <p><strong>Prep Time:</strong>
+                <%= recipe.prepTime %>
+            </p>
+            <p><strong>Cook Time:</strong>
+                <%= recipe.cookTime %>
+            </p>
+        </div>
+        <h3 class="recipe-headers">Description:</h3>
+        <div class="recipe-description">
+
+            <p>
+                <%= recipe.description %>
+            </p>
+        </div>
+
+
+        <h3 class="recipe-headers">Ingredients:</h3>
+        <div class="recipe-ingredients">
+            <ul>
+                <% recipe.ingredients.forEach(ingredient=> { %>
+                    <li>
+                        <%= ingredient %>
+                    </li>
+                    <% }); %>
+            </ul>
+        </div>
+
+
+        <h3 class="recipe-headers">Steps:</h3>
+        <div class="recipe-steps">
+            <ol>
+                <% recipe.steps.forEach(step=> { %>
+                    <li>
+                        <%= step %>
+                    </li>
+                    <% }); %>
+            </ol>
+        </div>
+
+
+        <a class="back-btn" href="/finder">Back to Recipe Finder</a>
+    </section>
+
+    <!-- Calendar Popup -->
+    <div id="calendar-popup" class="popup">
+        <div class="popup-content">
+            <h2>Add to Calendar</h2>
+            <label for="event-date">Select a date:</label>
+            <input type="date" id="event-date">
+            <button class="save-btn" id="save-event-btn">Save</button>
+            <button class="close-btn" id="close-popup-btn">Close</button>
+        </div>
+    </div>
+</body>

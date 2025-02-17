@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" href="/css/homePageStyle.css">
+    <link rel="stylesheet" href="/css/calendarstyle.css">
+
+</head>
+<body>
+
+    <section class="weekly-calendar">
+        <div class="main-box">
+            <div class="view-menu">
+                <h1>Weekly Calendar</h1>
+                <select id="view-select" style="display:none">
+                    <option value="Weekly" selected>Weekly</option>
+                </select>
+                <button id="reset-btn" class="button" style="display:none">Reset</button>
+            </div>
+            <div class="calendar-box">
+                <div class="calendar">
+                    <header>
+                        <span class="left"></span>
+                        <div class="calendar-header">
+                            <p class="display-header"></p>
+                        </div>
+                        <span class="right"></span>
+                    </header>
+                    <div class="week">
+                        <div>Su</div>
+                        <div>Mo</div>
+                        <div>Tu</div>
+                        <div>We</div>
+                        <div>Th</div>
+                        <div>Fr</div>
+                        <div>Sa</div>
+                    </div>
+                    <div class="days">
+                        <!--days will be filled here-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="side-box" style="display:none">
+            <div class="display-selected">
+                <p class="selected"></p>
+            </div>
+        </div>
+        <input type="hidden" id="initial-view" value="Weekly">
+    </section>
+
+    <section class="my-recipes">
+        <h1>My Recipes</h1>
+
+        <div class="recipe-cards">
+            <!-- The recipe cards will be dynamically populated by JavaScript -->
+        </div>
+    
+        <!-- Pagination Controls will be rendered dynamically by JavaScript -->
+        <div class="pagination-container" style="text-align: center; margin-top: 20px;"></div>
+    </section>
+
+    <!-- Hidden calendar data (meal dates) -->
+    <input type="hidden" id="calendar-data" value='<%- mealDates %>'>
+
+    <script src="/js/calendar.js" defer></script>
+    <script src="/js/homepage.js" defer></script>
+</body>

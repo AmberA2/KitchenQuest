@@ -1,0 +1,72 @@
+/* Popped out/floating effect for sections */
+main section {
+    background-color: #FFF3E6; /* light background for main sections */
+    color: #2e2d2c; /* Dark text color for readability */
+    margin-top: 240px;
+    padding: 20px; /* Add padding inside sections */
+    border-radius: 10px; /* Round corners of sections */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Strong shadow for floating effect */
+    border: 3px solid #C6A03A; /* Golden border around sections */
+}
+
+#links li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+#links a {
+    text-decoration: none; /* Remove underline */
+    color: #C6A03A; /* Golden color for links */
+    font-size: 18px; /* Increase font size */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    font-weight: bold;
+}
+
+#links a:hover {
+    color: #FFDE00;
+    text-decoration: underline;
+}
+
+#links a:visited{
+    color: #6f8a74;
+}
+
+/* Styling for the search section */
+.search-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+p {
+    font-weight: bold; /* Make the text bold */
+    font-size: 18px; /* Adjust text size if needed */
+    margin-bottom: 10px; /* Space between text and search bar */
+}
+
+.search-bar2 {
+    padding: 10px; /* Add padding inside the search bar */
+    width: 300px; /* Set a fixed width for the search bar */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for size changes */
+    margin-bottom: 15px; /* Space between the search bar and button */
+}
+
+.search-btn2 {
+    padding: 10px 15px; /* Add padding for search button */
+    background-color: #d6a191; /* Set background color to Soft Pink */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    margin-left: 5px; /* Add space to the left of the button */
+    color: white; /* Set button text color to white */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: 'Cinzel', serif; /* Set font for button text */
+}
+
+.search-btn2:hover {
+    background-color: #c49c7a; /* Darken button on hover */
+}
+
+.search-bar2:focus {
+    outline: none; /* Remove focus outline for a cleaner look */
+    box-shadow: 0 0 5px rgba(198, 160, 58, 0.7); /* Add glow effect on focus */
+}

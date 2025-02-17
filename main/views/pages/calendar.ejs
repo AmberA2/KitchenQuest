@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="/css/calendarStyle.css">
+</head>
+<body>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="main-box">
+            <div class="view-menu">
+                <h1>My Calendar</h1>
+                <select id="view-select">
+                    <option value="Monthly">Monthly</option>
+                    <option value="Weekly">Weekly</option>
+                </select>
+                <button id="reset-btn" class="button">Reset</button>
+            </div>
+            <div class="calendar-box">
+                <div class="calendar">
+                    <header>
+                        <span class="left">◀</span>
+                        <div class="calendar-header">
+                            <p class="display-header"></p>
+                        </div>
+                        <span class="right">▶</span>
+                    </header>
+                    <div class="week">
+                        <div>Su</div>
+                        <div>Mo</div>
+                        <div>Tu</div>
+                        <div>We</div>
+                        <div>Th</div>
+                        <div>Fr</div>
+                        <div>Sa</div>
+                    </div>
+                    <div class="days">
+                        <!--days will be filled here-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Side Panel-->
+        <div class="side-box">
+            <div class="display-selected">
+                <p class="selected"></p>
+            </div>
+            <div class="meals">
+                <!--user's meals will be filled here-->
+            </div>
+        </div>
+    </div>
+    <!-- Add calendarData as a data attribute in a hidden div -->
+    <input type="hidden" id="calendar-data" value='<%- mealDates %>'>
+    <input type="hidden" id="initial-view" value="Monthly">
+    <script src="/js/calendar.js" defer></script>
+</body>

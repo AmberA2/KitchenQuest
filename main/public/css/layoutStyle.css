@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    font-family: 'Cinzel', serif; /* Set the font to Cinzel for all text */
+    background-color: #2e2d2c; /* Set a dark background color */
+    color: white; /* Set text color to white for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.topBar {
+    position: fixed; /* Set the topBar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    margin-bottom: 30px;
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: height 0.3s ease; /* Smooth transition for height */
+}
+
+h1 a {
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 60px; /* Set font size for main title */
+    color: #ffffff; /* Set title color to white */
+    transition: font-size 0.3s ease; /* Smooth transition for font size */
+    
+}
+
+.header-scrolled h1 a {
+    font-size: 30px; /* Shrink title on scroll */
+}
+
+header {
+    background-color: #6f8a74; /* Use Sage Green for header background */
+    padding: 20px; /* Add padding inside the header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Position relative for absolute children */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: padding 0.3s ease; /* Smooth transition for padding changes */
+}
+
+.header-scrolled {
+    padding: 10px; /* Reduce padding on scroll */
+    height: 60px; /* Optional: Set a specific height */
+}
+
+.title-section {
+    align-items: center; /* Center items vertically */
+    flex: 1; /* Allow title section to grow and take up available space */
+    margin-right: 0px;
+}
+
+/* Search Section */
+.search-section {
+    display: flex; /* Align search input and button in a row */
+    align-items: center; /* Center items vertically */
+    flex-grow: 1; /* Allow the search section to grow and take available space */
+    margin-left: 20px; /* Add margin to the left for spacing */
+    margin-right: 20px; /* Add margin to the right for spacing */
+    margin-top: 20px; /* Add margin to the top for spacing below the title */
+}
+
+.header-scrolled .search-section {
+    margin-top: 0; /* Remove margin on scroll */
+    align-items: center; /* Center align items vertically */
+}
+
+.search-bar {
+    padding: 10px; /* Add padding inside the search bar */
+    width: 300px; /* Set a fixed width for the search bar */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for size changes */
+}
+
+.search-btn {
+    padding: 10px 15px; /* Add padding for search button */
+    background-color: #d6a191; /* Set background color to Soft Pink */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    margin-left: 5px; /* Add space to the left of the button */
+    color: white; /* Set button text color to white */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-family: 'Cinzel', serif; /* Set font for button text */
+}
+
+.search-btn:hover {
+    background-color: #D78A67; /* Set the hover color */
+}
+
+/*User section*/
+.user-info {
+    position: absolute; /* Position user info absolutely within the header */
+    top: 20px; /* Align user info to the top */
+    right: 80px; /* Align user info to the right */
+    text-align: center; /* Center align text in user info */
+    transition: all 0.3s ease; /* Smooth transition for size changes */
+}
+
+.header-scrolled .user-info {
+    top: 10px; /* Move user info up slightly on scroll */
+}
+
+.user-photo-container {
+    width: 100px; /* Desired width */
+    height: 100px; /* Desired height */
+    border-radius: 50%; /* Circular container */
+    overflow: hidden; /* Crop excess parts of the image */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.user-photo-container img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image to cover the container */
+}
+
+.header-scrolled .user-photo-container {
+    width: 50px; /* Shrink photo size on scroll */
+    height: 50px;
+}
+
+.user-name {
+    font-size: 15px; /* Set font size for user name */
+    color: white; /* Set user name color to white */
+    margin-top: 5px; /* Add space above user name */
+    text-decoration: none;
+}
+
+.header-scrolled .user-name {
+    font-size: 10px; /* Shrink user name on scroll */
+}
+/* Remove underline from the user-info-link */
+.user-info-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent styles */
+}
+
+/* Ensure the user name text has no underline */
+.user-info-link .user-name {
+    text-decoration: none;
+    color: white; /* Default color for the user name */
+}
+
+/* Hover effect: change text color and optionally add underline */
+.user-info-link:hover .user-name {
+    color: #FFDE00; /* Change color to golden yellow */
+    text-decoration: underline; /* Add underline on hover if desired */
+}
+
+.dropdown-menu {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Position it below the user info */
+    top: 110%; /* Adjust the position below the user photo */
+    right: 0; /* Align to the right side */
+    background-color: #333; /* Dark background for the dropdown */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    z-index: 1000; /* Make sure it appears above other content */
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Cinzel', serif;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555; /* Highlight when hovering over links */
+}
+
+.dropdown-menu.show {
+    display: block; /* Show the dropdown when the 'show' class is added */
+}
+
+/* Navigation Tabs (Text Links) */
+nav {
+    background-color: #d6a191; /* Soft Pink */
+    padding: 10px;
+    text-align: center;
+    margin-top: 0px;
+    border-radius: 0px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Floating effect for the nav */
+}
+
+/* Add this to change the height of the nav when scrolled */
+.tabs-scrolled {
+    height: 10px; /* Set a smaller height for the nav when scrolled */
+}
+
+.tabs {
+    display: flex;
+    justify-content: center; /* Center text tabs */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Text-based tab links */
+.tabs a {
+    flex: 1;
+    margin: 0 15px; /* Space between tabs */
+    padding: 10px;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Font size for tabs */
+    font-family: 'Cinzel', serif; /* Font family */
+    position: relative; /* For positioning the active tab underline */
+    transition: all 0.3s ease; /* Smooth transition for tab size and color */
+    white-space: nowrap; /* Prevent text wrapping */
+    transition: all 0.3s ease; /* Smooth transition for tab size and color */
+    font-weight: bold;
+}
+
+/* Adjust font size for tabs when nav is scrolled */
+nav.tabs-scrolled .tabs a {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 15px; /* Smaller font size for tabs when scrolled */
+    padding: 5px; /* Adjust padding for tabs when scrolled */
+    
+}
+
+/* Hover state */
+.tabs a:hover {
+    color: #FFDE00; /* lighter Gold color on hover */
+}
+
+/* Active Tab Style */
+.tabs a.active {
+    color: #FFDE00; /* Active tab color (light gold) */
+    font-weight: bold; /* Bold text for active tab */
+}
+
+/* Optional: Active tab underline */
+.tabs a.active::after {
+    content: ""; /* Creates a pseudo-element */
+    position: absolute; /* Position relative to the link */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: -5px; /* Position slightly below text */
+    height: 3px; /* Height of the underline */
+    background-color: #FFDE00; /* Underline color */
+}
