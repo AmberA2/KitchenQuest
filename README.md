@@ -1,5 +1,5 @@
 # KitchenQuest
-This is KitchenQuest, a recipe finder web app. This is a project created by Amber Anderson, Korban Anders, Carmen Cruz, and Ivie Xue for our Web App project for Purdue University Fort Wayne, which we got the award for best project of the semester. This is the a personal copy to provide public access to the source code for potential employeers to look at.
+This is KitchenQuest, a recipe finder web app. This is a project created by Amber Anderson, Korban Anders, Carmen Cruz, and Ivie Xue for our Web App project for Purdue University Fort Wayne, which we got the award for best project of the semester. This is the a personal copy to provide public access to the source code for potential employers to look at.
 
 Demo video: https://youtu.be/43I5Mq0ca9E
 
